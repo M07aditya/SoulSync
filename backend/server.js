@@ -27,10 +27,11 @@ mongoose
 
 app.use(express.json());
 const corsOptions = {
-  origin:"https://localhost:3000",
+  origin:"https://localhost:5000",
   Credentials:true
 }
 app.use(cors(corsOptions));
+
 app.use(cookieParser());
 app.use (bodyParser.json ({extended: true}));
 app.use (bodyParser.urlencoded({extended: true}));
@@ -53,8 +54,7 @@ app.use(express.static(path.join(_dirname,"/frontend/dist")));
 app.get('*',(req,res)=>{
   res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"));
 })
-
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 
 server.listen(port, () => {
   console.log("Server is running on port", port);
