@@ -19,7 +19,7 @@ const AnonymousPost = () => {
     };
 
     try {
-      const response = await fetch('https://soulsync-plkm.onrender.com/createAnonymousPosts', {
+      const response = await fetch('soul-sync-rouge.vercel.app/createAnonymousPosts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
