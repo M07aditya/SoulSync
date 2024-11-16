@@ -50,10 +50,7 @@ app.use('/uploads', express.static(path.join(_dirname, 'uploads')));
 app.use('/upload1', express.static(path.join(_dirname, 'upload1')));
 
 app.use('/', userRoutes);
-app.use(express.static(path.join(_dirname,"/frontend/dist")));
-app.get('*',(req,res)=>{
-  res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"));
-})
+
 const port = process.env.PORT || 5000;
 
 server.listen(port, () => {
