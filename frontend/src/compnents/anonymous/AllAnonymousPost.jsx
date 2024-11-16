@@ -8,7 +8,7 @@
 //   useEffect(() => {
 //     const fetchAnonymousPosts = async () => {
 //       try {
-//         const response = await axios.get('https://soulsync-plkm.onrender.com/anonymousPosts');
+//         const response = await axios.get('https://lucky-alpaca-6ef4e5.netlify.app//anonymousPosts');
 //         setAnonymousPosts(response.data);
 //       } catch (error) {
 //         console.error('Error fetching anonymous posts:', error);
@@ -70,7 +70,7 @@ const AllAnonymousPost = () => {
   useEffect(() => {
     const fetchAnonymousPosts = async () => {
       try {
-        const response = await axios.get('https://soulsync-plkm.onrender.com/anonymousPosts');
+        const response = await axios.get('https://lucky-alpaca-6ef4e5.netlify.app//anonymousPosts');
         setAnonymousPosts(response.data);
       } catch (error) {
         console.error('Error fetching anonymous posts:', error);

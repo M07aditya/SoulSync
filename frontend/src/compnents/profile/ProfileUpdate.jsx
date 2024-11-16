@@ -18,7 +18,7 @@
 //     useEffect(() => {
 //         const fetchUserDetails = async () => {
 //             try {
-//                 const response = await fetch(`https://soulsync-plkm.onrender.com/${username}/getuserdetails`);
+//                 const response = await fetch(`https://lucky-alpaca-6ef4e5.netlify.app//${username}/getuserdetails`);
 //                 if (response.status === 200) {
 //                     const data = await response.json();
 //                     const { name, email, gender, age, bio, profilePicture } = data;
@@ -86,7 +86,7 @@
 //                 formData.append('profilePicture', profilePicture);
 //             }
     
-//             const response = await axios.patch(`https://soulsync-plkm.onrender.com/${username}/update-user`, formData, { headers: { 'Content-Type': 'application/json'}});
+//             const response = await axios.patch(`https://lucky-alpaca-6ef4e5.netlify.app//${username}/update-user`, formData, { headers: { 'Content-Type': 'application/json'}});
 //             console.log(response);
 //             if (response.status === 200) {
 //                 navigate(`/${username}/profile`);
@@ -266,7 +266,7 @@ const ProfileUpdate = () => {
     useEffect(() => {
         const fetchUserDetails = async () => {
             try {
-                const response = await fetch(`https://soulsync-plkm.onrender.com/${username}/getuserdetails`);
+                const response = await fetch(`https://lucky-alpaca-6ef4e5.netlify.app//${username}/getuserdetails`);
                 if (response.status === 200) {
                     const data = await response.json();
                     const { name, email, gender, age, bio, profilePicture } = data;
@@ -334,7 +334,7 @@ const ProfileUpdate = () => {
                 formData.append('profilePicture', profilePicture);
             }
 
-            const response = await axios.patch(`https://soulsync-plkm.onrender.com/${username}/update-user`, formData, { headers: { 'Content-Type': 'application/json'}});
+            const response = await axios.patch(`https://lucky-alpaca-6ef4e5.netlify.app//${username}/update-user`, formData, { headers: { 'Content-Type': 'application/json'}});
             console.log(response);
             if (response.status === 200) {
                 navigate(`/${username}/profile`);

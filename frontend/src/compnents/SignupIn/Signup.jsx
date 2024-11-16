@@ -51,7 +51,7 @@
 //                 formDataWithFile.append('profilePicture', profilePicture);
 //             }
 
-//             const response = await fetch('https://soulsync-plkm.onrender.com/signup', {
+//             const response = await fetch('https://lucky-alpaca-6ef4e5.netlify.app//signup', {
 //                 method: 'POST',
 //                 body: formDataWithFile,
 //             });
@@ -355,7 +355,7 @@ export default function Signup() {
                 formDataWithFile.append('profilePicture', profilePicture);
             }
 
-            const response = await fetch('https://soulsync-plkm.onrender.com/signup', {
+            const response = await fetch('https://lucky-alpaca-6ef4e5.netlify.app//signup', {
                 method: 'POST',
                 body: formDataWithFile,
             });

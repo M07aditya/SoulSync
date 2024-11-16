@@ -23,7 +23,7 @@ const CreateJournal = () => {
     }
 
     try {
-      const response = await fetch(`https://soulsync-plkm.onrender.com/${user}`, {
+      const response = await fetch(`https://lucky-alpaca-6ef4e5.netlify.app//${user}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${user}`
