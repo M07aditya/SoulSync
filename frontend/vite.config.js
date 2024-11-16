@@ -9,5 +9,9 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    
+  },
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase the chunk size warning limit to 1000 kB
   },
 });
