@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000, // Default is 5173
     proxy: {
       '/api': {
-        target: 'https://lucky-alpaca-6ef4e5.netlify.app/', // Proxy API requests to backend
+        target: 'https://soulsync-plkm.onrender.com/', // Proxy API requests to backend
         changeOrigin: true,
         secure: false,
       },

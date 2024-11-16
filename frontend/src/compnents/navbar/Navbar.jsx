@@ -46,7 +46,7 @@ const Navbar = () => {
   const confirmDelete = async () => {
     try {
       // Call the backend route to delete the user
-      await fetch(`https://lucky-alpaca-6ef4e5.netlify.app/delete-user/${user}`, {
+      await fetch(`https://soulsync-plkm.onrender.com/delete-user/${user}`, {
         method: 'DELETE',
       });
       // Perform logout after deletion

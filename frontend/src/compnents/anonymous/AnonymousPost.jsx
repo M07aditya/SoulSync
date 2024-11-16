@@ -19,7 +19,7 @@ const AnonymousPost = () => {
     };
 
     try {
-      const response = await fetch('https://lucky-alpaca-6ef4e5.netlify.app/createAnonymousPosts', {
+      const response = await fetch('https://soulsync-plkm.onrender.com/createAnonymousPosts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

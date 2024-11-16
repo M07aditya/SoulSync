@@ -11,7 +11,7 @@ const JournalDetail = () => {
     useEffect(() => {
         const fetchJournal = async () => {
             try {
-                const response = await axios.get(`https://lucky-alpaca-6ef4e5.netlify.app/${username}/${id}`);
+                const response = await axios.get(`https://soulsync-plkm.onrender.com/${username}/${id}`);
                 setJournal(response.data);
             } catch (error) {
                 setError('Error fetching journal details');
@@ -28,7 +28,7 @@ const JournalDetail = () => {
         return <div>Loading...</div>;
     }
 
-    const coverImage = journal.coverPicture ? `https://lucky-alpaca-6ef4e5.netlify.app/${journal.coverPicture}` : defaultCoverImage;
+    const coverImage = journal.coverPicture ? `https://soulsync-plkm.onrender.com/${journal.coverPicture}` : defaultCoverImage;
 
     return (
         <div className="bg-white py-16 sm:py-24">
