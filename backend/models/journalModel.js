@@ -2,6 +2,10 @@ import mongoose from 'mongoose';
 
 
 const journalSchema = new mongoose.Schema({
+    _id: {
+        type: String,  // Allow _id to be a string instead of ObjectId
+        required: true
+      },
     title: {
         type: String,
         required: true

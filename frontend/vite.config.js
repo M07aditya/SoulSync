@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000, // Default is 5173
     proxy: {
       '/api': {
-        target: 'https://soulsync-plkm.onrender.com/', // Proxy API requests to backend
+        target: 'http://localhost:8000/', // Proxy API requests to backend
         changeOrigin: true,
         secure: false,
       },
