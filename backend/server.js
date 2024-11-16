@@ -9,25 +9,28 @@ import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import passport from 'passport';
 import userRoutes from './routes/route.js';
-import Connection from './database/db.js';
 import path from 'path';
-import { fileURLToPath } from 'url';
+
 import bodyParser from 'body-parser';
 
-
-mongoose.set('strictQuery', true);
 
 const app = express();
 const server = http.createServer(app); // Create HTTP server
 
+mongoose
+  .connect(
+    "mongodb+srv://adityamurari7:aditya@cluster0.mf22q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  )
+  .then(() => console.log("MongoDB connected"))
+  .catch((error) => console.log(error));
+
 
 app.use(express.json());
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'],
-  credentials: true,
-
-}));
+const corsOptions = {
+  origin:"https://localhost:3000",
+  Credentials:true
+}
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use (bodyParser.json ({extended: true}));
 app.use (bodyParser.urlencoded({extended: true}));
@@ -40,16 +43,18 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const _dirname = path.resolve();
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-app.use('/upload1', express.static(path.join(__dirname, 'upload1')));
+app.use('/uploads', express.static(path.join(_dirname, 'uploads')));
+app.use('/upload1', express.static(path.join(_dirname, 'upload1')));
 
-Connection();
 app.use('/', userRoutes);
+app.use(express.static(path.join(_dirname,"/frontend/dist")));
+app.get('*',(req,res)=>{
+  res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"));
+})
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 server.listen(port, () => {
   console.log("Server is running on port", port);

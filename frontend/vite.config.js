@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -13,5 +13,8 @@ export default defineConfig({
         secure: false,
       },
     },
+  },
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase the chunk size warning limit to 1000 kB
   },
 });

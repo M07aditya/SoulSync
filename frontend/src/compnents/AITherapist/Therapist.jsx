@@ -8,7 +8,6 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
-// eslint-disable-next-line react/prop-types
 const TypingAnimation = ({ color }) => (
   <div className="item text-2xl">
     <Loader type="ping-cube" bgColor={color} color={color} size={100} />

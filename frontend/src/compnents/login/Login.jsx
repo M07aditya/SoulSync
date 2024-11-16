@@ -274,7 +274,7 @@ const Login = () => {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('tokenUser', response.data.user.username);
       navigate(`/`);
-    // eslint-disable-next-line no-unused-vars
+ 
     } catch (err) {
       setError('Invalid username or password');
     }
