@@ -11,7 +11,7 @@ const JournalDetail = () => {
     useEffect(() => {
         const fetchJournal = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/${id}`);
+                const response = await axios.get(`https://soulsyncs.onrender.com/${id}`);
                 setJournal(response.data);
             } catch (error) {
                 setError('Error fetching journal details');
@@ -28,7 +28,7 @@ const JournalDetail = () => {
         return <div>Loading...</div>;
     }
 
-    const coverImage = journal.coverPicture ? `http://localhost:8000/${CoverImage}` : defaultCoverImage;
+    const coverImage = journal.coverPicture ? `https://soulsyncs.onrender.com/${CoverImage}` : defaultCoverImage;
 
     return (
         <div className="bg-white py-16 sm:py-24">
