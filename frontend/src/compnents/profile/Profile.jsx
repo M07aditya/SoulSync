@@ -18,7 +18,7 @@ const Profile = () => {
     // Function to fetch user details
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`https://soulsync-1.onrender.com/${username}/getuserdetails`);
+        const response = await axios.get(`http://localhost:8000/${username}/getuserdetails`);
         // Set user details in state
         console.log(response);
         setUserDetails(response.data);
@@ -79,7 +79,7 @@ const Profile = () => {
                     <div className="relative">
                       <img
                         alt="Profile"
-                        src={userDetails.profilePicture ? `https://soulsync-1.onrender.com/${userDetails.profilePicture}` : defaultProfilePicture}
+                        src={userDetails.profilePicture ? `http://localhost:8000/${userDetails.profilePicture}` : defaultProfilePicture}
                         className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-24 max-w-[180px]"
                       />
                     </div>

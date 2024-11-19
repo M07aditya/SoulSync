@@ -23,7 +23,7 @@ const CreateJournal = () => {
     }
 
     try {
-      const response = await fetch(`https://soulsync-1.onrender.com/${user}`, {
+      const response = await fetch(`http://localhost:8000/${user}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${user}`

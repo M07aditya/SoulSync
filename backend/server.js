@@ -27,7 +27,7 @@ mongoose
 
 app.use(express.json());
 const corsOptions = {
-  origin:"https://localhost:8000",
+  origin:'http://localhost:5173',
   Credentials:true
 }
 app.use(cors(corsOptions));
