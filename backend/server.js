@@ -27,7 +27,7 @@ mongoose
 
 app.use(express.json());
 const corsOptions = {
-  origin:'http://localhost:3000',
+  origin:'https://willowy-taiyaki-c3bcf8.netlify.app',
   credentials:true
 }
 app.use(cors(corsOptions));
