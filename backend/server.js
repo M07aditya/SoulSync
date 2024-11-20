@@ -27,9 +27,8 @@ mongoose
 
 app.use(express.json());
 const corsOptions = {
-  origin:'http://localhost:5173',
-  origin:'https://zingy-zabaione-9014ee.netlify.app',
-  Credentials:true
+  origin:'http://localhost:3000',
+  credentials:true
 }
 app.use(cors(corsOptions));
 
