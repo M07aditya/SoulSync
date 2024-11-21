@@ -7,6 +7,7 @@ import Navbar from '../navbar/Navbar';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
+
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 const questions = [

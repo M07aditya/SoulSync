@@ -28,7 +28,7 @@ const JournalDetail = () => {
         return <div>Loading...</div>;
     }
 
-    const coverImage = journal.coverPicture ? `https://soulsyncs.onrender.com/${CoverImage}` : defaultCoverImage;
+    const coverImage = journal.coverPicture ? `https://soulsyncs.onrender.com/${coverImage}` : defaultCoverImage;
 
     return (
         <div className="bg-white py-16 sm:py-24">
